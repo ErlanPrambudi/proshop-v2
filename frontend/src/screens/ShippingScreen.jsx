@@ -18,12 +18,12 @@ const ShippingScreen = () => {
 
   const [formData, setFormData] = useState({
     addres: shippingDetails?.address || '',
-    selectedProvince: shippingDetails?.selectedProvince || '',
-    selectedCity: shippingDetails?.selectedCity || '',
+    selectedProvince: '',
+    selectedCity: '',
     recipientName: shippingDetails?.recipientName || '',
     curierNote: shippingDetails?.curierNote || '',
     numberPhone: shippingDetails?.numberPhone || '',
-    shippingPrice: shippingDetails?.shippingPrice || '',
+    shippingPrice: 100000,
   });
 
   const [deliveryList, setDeliveryList] = useState(null);
@@ -135,7 +135,7 @@ const ShippingScreen = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group className='my-2' controlId='province'>
+{/*         <Form.Group className='my-2' controlId='province'>
           <Form.Label>Provinsi</Form.Label>
           <Form.Select
             aria-label='Default select example'
@@ -163,9 +163,9 @@ const ShippingScreen = () => {
           <Form.Control.Feedback type='invalid'>
             Pilih Provinsi Tujuan
           </Form.Control.Feedback>
-        </Form.Group>
+        </Form.Group> */}
 
-        <Form.Group className='my-2' controlId='City'>
+{/*         <Form.Group className='my-2' controlId='City'>
           <Form.Label>Kota</Form.Label>
           <Form.Select
             aria-label='Default select example'
@@ -193,7 +193,7 @@ const ShippingScreen = () => {
             Pilih Kota Tujuan
           </Form.Control.Feedback>
         </Form.Group>
-
+ */}
         <Form.Group className='my-2' controlId='address'>
           <Form.Label>Alamat Lengkap</Form.Label>
           <Form.Control
@@ -220,7 +220,7 @@ const ShippingScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group className='my-2' controlId='City'>
+{/*         <Form.Group className='my-2' controlId='City'>
           <Form.Label>Pilih Pengiriman</Form.Label>
           <Form.Select
             aria-label='Default select example'
@@ -252,7 +252,7 @@ const ShippingScreen = () => {
             Pilih Kota Tujuan
           </Form.Control.Feedback>
         </Form.Group>
-
+ */}
         <Button type='submit' variant='success'>
           Lanjutkan
         </Button>
